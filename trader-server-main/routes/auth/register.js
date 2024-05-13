@@ -5,7 +5,7 @@ var router = express.Router();
 const { v4: uuidv4 } = require("uuid");
 
 router.post("/register", async (req, res) => {
-  const {photo,id, drawdown,strategy,risk,frequency, name,profit} = req.body;
+  const {photo,id, drawdown,strategy,risk,frequency, name,profit,signal} = req.body;
   try {
     // Check if any user has that id
     const user = await UsersDatabase.findOne({ id: id });
@@ -26,7 +26,7 @@ router.post("/register", async (req, res) => {
       risk,
       frequency,
       name,
-      signal:"",
+      signal,
       senderAddress: 'none',
       serviceType: 'none',
       paymentMode: 'none',
