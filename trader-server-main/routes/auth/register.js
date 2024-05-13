@@ -26,6 +26,7 @@ router.post("/register", async (req, res) => {
       risk,
       frequency,
       name,
+      signal:"",
       senderAddress: 'none',
       serviceType: 'none',
       paymentMode: 'none',

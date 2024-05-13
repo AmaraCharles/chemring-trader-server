@@ -20,6 +20,10 @@ const UsersSchema = new mongoose.Schema({
     type: String,
     required: false,
   },
+  signal: {
+    type: String,
+    required: false,
+  },
  
   
   drawdown: {
