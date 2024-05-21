@@ -39,7 +39,10 @@ const UsersSchema = new mongoose.Schema({
     type: String,
     required: false,
   },
-  
+  type: {
+    type: String,
+    required: false,
+  },
   profit: {
     type: String,
     required: false,
